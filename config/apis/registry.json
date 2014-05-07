@@ -1,0 +1,8 @@
+{
+	"api": "wsstub",
+	"label": "Registry",
+	"category1": "Add-ons",
+	"category2" : "Web Services",
+	"overview": "provides a web service client from a given WSDL",
+	"deprecated" : true
+}
