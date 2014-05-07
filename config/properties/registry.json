@@ -1,0 +1,37 @@
+{
+	"sections": [
+		 {
+			"title": "Operations",
+			"columns": ["Operations", "Returns", "Description"],
+			"rows": [
+				{
+					"Operations": "put(path, resource)",
+					"Returns": "None",
+					"Description": "<B> Adding a resource </B> <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <li>resource - this is the json object which contains all data related to the resource which will be created. </li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><span class=\"pln\"> </span><br><span class=\"kwd\">var</span><span class=\"pln\"> resource </span><span class=\"pun\">=</span><span class=\"str\">{ \n\tcontent: 'This is a sample text.', \n\tmediaType: 'text/plain', \n\tdescription: 'This is a sample description', \n\tuuid: '0123', \n\t\tproperties:{prop1: 'val1', prop2: 'val2'}</span><span class=\"pun\">\n\t};</span><span class=\"pln\"> </span></pre> <i> content - content of the resource. <br> mediaType - type of the resource’s content <br>description - a description about the resource. <br>uuid - <br>properties - properties of the resource. This is a json object which contains property name and its value. </i>"
+				}, {
+					"Operations": "put(path, collection)",
+					"Returns": "None",
+					"Description": "<B> Adding a collection </B> <br> Collection is also a resource which contains set of resources. So we can use put method as above to add a collection. <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <li>collection - this is the json object which contains all data related to the collction which will be created. </li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><span class=\"pln\"> </span><br><span class=\"kwd\">var</span><span class=\"pln\"> resource </span><span class=\"pun\">=</span><span class=\"str\">{ \n\tcollection: true,\n\tdescription: 'This is a sample description', \n\tuuid: '0123', \n\t\tproperties:{prop1: 'val1', prop2: 'val2'}</span><span class=\"pun\">\n\t};</span><span class=\"pln\"> </span></pre> <i> collection - boolean value to identify the resource as a collection.<br> description - a description about the resource. <br>uuid - <br>properties - properties of the resource. This is a json object which contains property name and its value. </i>"
+				}, {
+					"Operations": "get(path)",
+					"Returns": "object",
+					"Description": "<B> Retrieving a resource </B> <br> We can retrieve a resource to jaggery as a json object which contains all data about the resource. <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span> <span class=\"kwd\"><br>var</span><span class=\"pln\"> resource </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">get</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">)</span></span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "move(src, dest)",
+					"Returns": "None",
+					"Description": "<B> Moving a resource: </B> <br> We can move a resource to a new location in registry. <br> parameters: <ul> <li>src - Current location(path) of the resource.</li> <li>dest - Destination location(path) of the resource. </li><ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> src </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span> <br><span class=\"kwd\">var</span><span class=\"pln\"> dest </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/dest/sample'</span><span class=\"pun\">;</span> </pre> "
+				},{
+					"Operations": "copy(src, dest)",
+					"Returns": "None",
+					"Description": "<B> Copping a resource: </B> <br> We can copy a resource to a new location in registry. <br> parameters: <ul> <li>src - Current location(path) of the resource.</li> <li>dest - Destination location(path) of the resource. </li><ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> src </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span> <br><span class=\"kwd\">var</span><span class=\"pln\"> dest </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/dest/sample'</span><span class=\"pun\">;</span> </pre> "
+				},
+				{
+					"Operations": "copy(src, dest)",
+					"Returns": "None",
+					"Description": "<B> Copping a resource: </B> <br> We can copy a resource to a new location in registry. <br> parameters: <ul> <li>src - Current location(path) of the resource.</li> <li>dest - Destination location(path) of the resource. </li><ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> src </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span> <br><span class=\"kwd\">var</span><span class=\"pln\"> dest </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/dest/sample'</span><span class=\"pun\">;</span> </pre> "
+				}
+
+			]
+		}
+	]
+}
