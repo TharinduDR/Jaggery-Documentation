@@ -36,6 +36,8 @@ CATEGORIES = [{
 		'Server' : ['process']
 	}, {
 		'Internationalization' : ['i18n']
+	}, {
+		'Carbon' : ['UserManager','registry']
 	}]
 }, {
 	'Configuration File' : [{
