@@ -9,10 +9,6 @@
 					"Returns": "Object",
 					"Description": "Following parameters should be passed to the constructor: <br><br> <ul> <li><em>serv </em>: carbon server instance which we connect to the user store. </li> <li><em>tenantId</em>: tenant id of user </li> </ul> <pre class=\"prettyprint\"><span class=\"kwd\">var carbon = require('carbon');<br>var tenantId = -1234;<br>var url = 'https://10.100.0.49:9443/admin/services/';<br>var server = new carbon.server.Server(url);<br>var userManager = new carbon.user.UserManager(server, tenantId);</span></pre> "
 				},{
-					"Operation": "tenantUser(username String)",
-					"Returns": "Object",
-					"Description": "This method returns tenent information for a given username. It accepts the following parameters: <br><br> <ul> <li><em>username (String) </em>: username of which tenant information is required. </li> </ul> This returns an object which has following information. <ul> <li>domain</li> <li>username</li> <li>tenantId</li> </ul> <pre class=\"prettyprint\"><span class=\"kwd\">{ domain: ‘wso2.com’, username: ‘admin’, tenantId: 1 }</span></pre> "
-				},{
 					"Operation": "addUser(userName String, password String, roles Array, claims Object, profile String)",
 					"Returns": "None",
 					"Description": "This method adds a new user to the user store. It accepts the following parameters: <br><br> <ul> <li><em>username (String) </em>: user name to be added. This name should be unique.  </li> <li><em>password (String) </em>: password for the new user.  </li> <li><em>roles (Array) </em>: Array of roles that user should be added. If there are no such roles, an empty array should be passed.  </li> <li><em>claims (Object) </em>: A JSON object which contains claims to be added to new user and their respective values.<br> </li> <li><em>profile (String) </em>:  </li> </ul> This adds user with specified details to the user store.  "
@@ -71,7 +67,7 @@
 				},{
 					"Operation": "isAuthorized(role String, permission String, action String)",
 					"Returns": "Boolean",
-					"Description": "This method checks id a given role is authorized for given action. It accepts the following parameters: <br><br> <ul> <li><em>role (String) </em>: role name.  </li> <li><em>permission (String) </em>: permission path in permission tree.  </li><li><em>action (String) </em>: The action.  </li> This methods returns 'true' if the 'role' is authorized to do 'action' in 'permission'"
+					"Description": "This method checks if a given role is authorized for given action. It accepts the following parameters: <br><br> <ul> <li><em>role (String) </em>: role name.  </li> <li><em>permission (String) </em>: permission path in permission tree.  </li><li><em>action (String) </em>: The action.  </li> This methods returns 'true' if the 'role' is authorized to do 'action' on 'permission'"
 				},{
 					"Operation": "denyRole(role String, permission String, action String)",
 					"Returns": "None",

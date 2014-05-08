@@ -37,7 +37,7 @@ CATEGORIES = [{
 	}, {
 		'Internationalization' : ['i18n']
 	}, {
-		'Carbon' : ['UserManager','registry']
+		'Carbon' : ['UserManager', 'user', 'registry']
 	}]
 }, {
 	'Configuration File' : [{
