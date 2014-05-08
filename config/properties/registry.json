@@ -84,6 +84,30 @@
 					"Operations": "uncomment(commentPath)",
 					"Returns": "None",
 					"Description": "<B> Unrating a resource: </B> <br> Remove a comment for a resource in registry <br> parameters: <ul> <li>commentPath - Path for the resource in registry with comment id. </li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> commentPath </span><span class=\"pun\">=</span><span class=\"str\">/_system/config/wso2/sample;comments:2'</span><span class=\"pun\">;</span><br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">uncomment</span><span class=\"pun\">(</span><span class=\"str\">commentPath</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "version(path)",
+					"Returns": "None",
+					"Description": "<B> Versioning a resource: </B> <br> Versioning a resource in registry <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">version</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "versions(path)",
+					"Returns": "array",
+					"Description": "<B> Getting versions of a resource: </B> <br> Returns an array of resource paths with version. <br> ex: ['/_system/config/wso2/sample;version:59', '/_system/config/wso2/sample;version:58']<br>parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span> <span class=\"kwd\"><br>var</span><span class=\"pln\"> versions </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">versions</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "restore(versionPath)",
+					"Returns": "None",
+					"Description": "<B> Restoring a resource: </B> <br>  Restore a resource to a previous version. <br> parameters: <ul> <li>versionPath - Path for the resource in registry with version</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> versionPath </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample;version:5'</span><span class=\"pun\">;</span><br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">version</span><span class=\"pun\">(</span><span class=\"str\">versionPath</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "unversion(path, versionId)",
+					"Returns": "None",
+					"Description": "<B> Removing a version of resource:</B> <br> Remove a previous version of a resource from the version history.<ul> <li>path - Path for the resource in registry. (resource path)</li> <li> versionId - Id of the version to be removed </li><ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><br><span class=\"kwd\">var</span><span class=\"pln\"> versionId </span><span class=\"pun\">=</span><span class=\"str\"> 4</span><span class=\"str\"></span><span class=\"pun\">;</span><br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">rate</span><span class=\"pun\">(</span><span class=\"str\">path,versionId</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "link(linkPath, target)",
+					"Returns": "None",
+					"Description": "<B> Linking a resource:</B> <br> Link a resource to another resource path.<ul> <li>linkPath - resource path where the link will be created.</li> <li> target - resource path where the resource is exists.</li><ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> linkPath  </span><span class=\"pun\">=</span><span class=\"str\">'/_system/local/wso2/sample'</span><span class=\"pun\">;</span><br><span class=\"kwd\">var</span><span class=\"pln\"> target</span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"str\"></span><span class=\"pun\">;</span><br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">link</span><span class=\"pun\">(</span><span class=\"str\">linkPath,target</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "versions(path)",
+					"Returns": "array",
+					"Description": "<B> Executing a query: </B> <br> can execute a query stored in registry. The query should be stored as “mediaType: 'application/vnd.sql.query' ”. <br> parameters: <ul> <li>qpath - resource path to the query</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> qpath </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/repository/components/org.wso2.carbon.registry/queries/allTags'</span><span class=\"pun\">;</span> <span class=\"kwd\"><br>var</span><span class=\"pln\"> qresults </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">query</span><span class=\"pun\">(</span><span class=\"str\">qpath</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
 				}
 			]
 		}
