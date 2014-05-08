@@ -43,7 +43,7 @@
 				},{
 					"Operations": "tags(path)",
 					"Returns": "array",
-					"Description": "<B> Retrieving tags: </B> <br>Retrieve all tags for a resource as a string array. <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><<span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">tag</span><span class=\"pun\">(</span><span class=\"str\">path,tags</span><span class=\"pun\">);</span><br>var</span><span class=\"pln\"> tags </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">tags</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">)</span></span><span class=\"pln\">\n</span></pre> "
+					"Description": "<B> Retrieving tags: </B> <br>Retrieve all tags for a resource as a string array. <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><br>var</span><span class=\"pln\"> tags </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">tags</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">)</span></span><span class=\"pln\">\n</span></pre> "
 				},{
 					"Operations": "untag(path, tags)",
 					"Returns": "None",
@@ -56,9 +56,35 @@
 					"Operations": "addProperty(path, propName, value)",
 					"Returns": "None",
 					"Description": "<B> Adding a property to resource:</B> <br> Add properties to a resource in registry <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <li>propName - name of the property</li> <li>value - value for the property </li><ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><br><span class=\"kwd\">var</span><span class=\"pln\"> propName </span><span class=\"pun\">=</span><span class=\"str\"> 'prop'</span><span class=\"str\"></span><span class=\"pun\">;</span><br><span class=\"kwd\">var</span><span class=\"pln\"> value </span><span class=\"pun\">=</span><span class=\"str\"> 'val'</span><span class=\"str\"></span><span class=\"pun\">;</span><br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">addProperty</span><span class=\"pun\">(</span><span class=\"str\">path,propName,value</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "properties(path)",
+					"Returns": "object",
+					"Description": "<B> Retrieving Properties: </B> <br> Return properties as a object. ex: {'prop2' : ['val2'], 'prop1' : ['val1']}<br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><br>var</span><span class=\"pln\"> tags </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">tags</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">)</span></span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "rating(path, user)",
+					"Returns": "object",
+					"Description": "<B> Getting rating of a resource: </B> <br> Get rating of a resource as a json which contains average rating and user rating. <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <li> user - user name of rate to get</li><ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><br><span class=\"kwd\">var</span><span class=\"pln\"> user </span><span class=\"pun\">=</span><span class=\"str\">'admin'</span><span class=\"pun\">;</span><br>var</span><span class=\"pln\"> rating </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">rating</span><span class=\"pun\">(</span><span class=\"str\">path,user</span><span class=\"pun\">)</span></span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "unrate(path)",
+					"Returns": "None",
+					"Description": "<B> Unrating a resource: </B> <br> Unrating a resource in registry <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">unrate</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "comment(path, comment)",
+					"Returns": "None",
+					"Description": "<B> Adding a comment: </B> <br> Comment a resource in registry. <br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <li>comment - String type comment </li><ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span> <br><span class=\"kwd\">var</span><span class=\"pln\"> comment </span><span class=\"pun\">=</span><span class=\"str\"> 'this is a sample comment'</span><span class=\"pun\">;</span> <br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">comment</span><span class=\"pun\">(</span><span class=\"str\">path,comment</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "comments(path)",
+					"Returns": "array",
+					"Description": "<B> Checking for the Existence of a Resource: </B> <br> Returns a comment object array. <br> ex: [{'content' : 'this is a sample comment 2', 'created' : {'author' : 'admin', 'time' : 1380091607480}, 'path' : '/_system/config/wso2/sample;comments:2'},{'content' : 'this is a sample comment', 'created' : {author : admin, time : 1380091557115}, path : '/_system/config/wso2/sample;comments:1'}]<br>parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span> <span class=\"kwd\"><br>var</span><span class=\"pln\"> comments </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">comments</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "commentCount(path)",
+					"Returns": "number",
+					"Description": "<B> Getting comment count: </B> <br> Get the number of comment for a resource<br> parameters: <ul> <li>path - Path for the resource in registry. (resource path)</li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> path </span><span class=\"pun\">=</span><span class=\"str\">'/_system/config/wso2/sample'</span><span class=\"pun\">;</span><br>var</span><span class=\"pln\"> tags </span><span class=\"pun\">=</span><span class=\"pln\"> registry</span><span class=\"pun\">.</span><span class=\"pln\">commentCount</span><span class=\"pun\">(</span><span class=\"str\">path</span><span class=\"pun\">)</span></span><span class=\"pln\">\n</span></pre> "
+				},{
+					"Operations": "uncomment(commentPath)",
+					"Returns": "None",
+					"Description": "<B> Unrating a resource: </B> <br> Remove a comment for a resource in registry <br> parameters: <ul> <li>commentPath - Path for the resource in registry with comment id. </li> <ul><pre class=\"prettyprint\"><span class=\"kwd\">var</span><span class=\"pln\"> commentPath </span><span class=\"pun\">=</span><span class=\"str\">/_system/config/wso2/sample;comments:2'</span><span class=\"pun\">;</span><br><span class=\"pln\">registry</span><span class=\"pun\">.</span><span class=\"pln\">uncomment</span><span class=\"pun\">(</span><span class=\"str\">commentPath</span><span class=\"pun\">);</span><span class=\"pln\">\n</span></pre> "
 				}
-
-
 			]
 		}
 	]
