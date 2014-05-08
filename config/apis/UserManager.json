@@ -3,6 +3,6 @@
 	"label": "UserManager",
 	"category1": "Add-ons",
 	"category2" : "Carbon",
-	"overview": "User object allows to do operations on the Carbon user store in Jaggery.",
+	"overview": "Usermanager object allows to do operations on the Carbon user store in Jaggery.",
 	"deprecated" : false
 }
